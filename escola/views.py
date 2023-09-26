@@ -1,6 +1,8 @@
 from rest_framework import viewsets, generics
 from escola.models import Aluno, Curso, Emprego, Matricula
 from escola.serializer import AlunoSerializer, CursoSerializer, EmpregoSerializer, MatriculaSerializer, ListaMatriculasAlunoSerializer, ListaAlunosMatriculadosSerializer
+from rest_framework.authentication import BasicAuthetication 
+from rest_framework.permissions import IsAuthenticated
 
 class AlunosViewSet(viewsets.ModelViewSet):
     """Exibindo todos os alunos e alunas"""
